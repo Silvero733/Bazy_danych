@@ -1,0 +1,2 @@
+SELECT nazwa
+FROM gry;
