@@ -1,0 +1,8 @@
+SELECT
+    id_gracza,
+    stan,
+    ocena
+FROM
+    oceny
+ORDER BY
+    id_gracza DESC;

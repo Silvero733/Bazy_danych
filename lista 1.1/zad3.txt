@@ -1,0 +1,8 @@
+SELECT
+    wiek,
+    nazwisko,
+    imie
+FROM
+    gracze
+ORDER BY
+    wiek DESC;

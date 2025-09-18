@@ -1,0 +1,6 @@
+SELECT
+    *
+FROM
+    gracze
+ORDER BY
+    wiek ASC;

@@ -1,0 +1,6 @@
+SELECT
+    *
+FROM
+    gry
+ORDER BY
+    nazwa ASC;

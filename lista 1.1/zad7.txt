@@ -1,0 +1,9 @@
+SELECT
+    id_gry,
+    kategoria,
+    nazwa
+FROM
+    gry
+ORDER BY
+    kategoria DESC,
+    nazwa DESC;

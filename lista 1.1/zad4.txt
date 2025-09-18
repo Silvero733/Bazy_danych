@@ -1,0 +1,8 @@
+SELECT
+    id_gry,
+    stan,
+    ocena
+FROM
+    oceny
+ORDER BY
+    ocena ASC;

@@ -1,0 +1,9 @@
+SELECT
+    id_gracza,
+    nazwisko,
+    imie
+FROM
+    gracze
+ORDER BY
+    nazwisko ASC,
+    nazwa ASC;
