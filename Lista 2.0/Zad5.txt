@@ -1,0 +1,9 @@
+SELECT
+    *
+FROM
+    gry
+WHERE
+    kategoria = "familijna"
+    OR kategoria = "imprezowa"
+ORDER BY
+    nazwa DESC;

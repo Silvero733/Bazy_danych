@@ -1,0 +1,17 @@
+SELECT
+    *
+FROM
+    gry
+WHERE
+    kategoria <> "kooperacyjna"
+    AND kategoria <> "logiczna"
+    AND kategoria <> "strategiczna"
+
+--
+
+SELECT
+    *
+FROM
+    gry
+WHERE
+    kategoria NOT IN ("kooperacyjna", "logiczna", "strategiczna");

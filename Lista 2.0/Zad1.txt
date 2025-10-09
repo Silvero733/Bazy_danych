@@ -1,0 +1,6 @@
+SELECT
+    *
+FROM
+    gry
+WHERE
+    kategoria = "logiczna";

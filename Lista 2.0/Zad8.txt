@@ -1,0 +1,16 @@
+SELECT
+    *
+FROM
+    oceny
+WHERE
+    ocena Mod 2 = 1;
+
+
+--
+
+SELECT
+    *
+FROM
+    oceny
+WHERE
+    ocena IN (1, 3, 5, 7, 9);

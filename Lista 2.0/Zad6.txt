@@ -1,0 +1,12 @@
+SELECT
+    id_gry,
+    ocena,
+    stan
+FROM
+    oceny
+WHERE
+    stan = "posiada"
+    AND ocena > 6
+ORDER BY
+    id_gry ASC,
+    ocena DESC;
