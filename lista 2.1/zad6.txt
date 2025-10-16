@@ -1,0 +1,24 @@
+SELECT
+    nazwa
+FROM
+    gry
+WHERE
+    nazwa LIKE "*1*"
+    OR nazwa LIKE "*2*"
+    OR nazwa LIKE "*3*"
+    OR nazwa LIKE "*4*"
+    OR nazwa LIKE "*5*"
+    OR nazwa LIKE "*6*"
+    OR nazwa LIKE "*7*"
+    OR nazwa LIKE "*8*"
+    OR nazwa LIKE "*9*"
+    OR nazwa LIKE "*0*";
+---
+
+
+SELECT
+    nazwa
+FROM
+    gry
+WHERE
+    nazwa LIKE "*#*";

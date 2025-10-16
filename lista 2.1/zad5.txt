@@ -1,0 +1,6 @@
+SELECT
+    nazwa
+FROM
+    gry
+WHERE
+    nazwa LIKE "* *";

@@ -1,0 +1,13 @@
+SELECT
+    *
+FROM
+    gracze
+WHERE
+    wiek > 19
+    AND imie LIKE "*mak*"
+    OR wiek MOD 10 = 0
+    AND nazwisko NOT LIKE "*ski"
+ORDER BY
+    wiek ASC,
+    nazwisko ASC,
+    id_gracza DESC;

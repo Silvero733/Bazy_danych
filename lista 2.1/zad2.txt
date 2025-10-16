@@ -1,0 +1,8 @@
+SELECT
+    *
+FROM
+    gracze
+WHERE
+    imie LIKE "*x"
+ORDER BY
+    nazwisko ASC;

@@ -1,0 +1,8 @@
+SELECT
+    nazwisko,
+    imie
+FROM
+    gracze
+WHERE
+    imie LIKE "m*"
+    AND nazwisko LIKE "m*";
