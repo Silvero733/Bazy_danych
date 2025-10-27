@@ -1,0 +1,9 @@
+SELECT
+    *
+FROM
+    gracze
+WHERE
+    imie = "Alfred"
+    AND nazwisko = "Malinowski"
+ORDER BY
+    wiek ASC;
