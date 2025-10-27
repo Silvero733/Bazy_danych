@@ -1,0 +1,4 @@
+SELECT
+    sum(ocena) / count(ocena) AS [srednia_ocen]
+FROM
+    oceny;

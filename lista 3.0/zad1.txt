@@ -1,0 +1,4 @@
+SELECT
+    max(wiek)
+FROM
+    gracze;

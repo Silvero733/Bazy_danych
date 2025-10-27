@@ -1,0 +1,10 @@
+SELECT
+    round(sum(wiek) / count(wiek)) AS [zaokr sredni wiek]
+FROM
+    gracze;
+
+---
+SELECT
+    round(avg(wiek)) AS [zaokr sredni wiek]
+FROM
+    gracze;

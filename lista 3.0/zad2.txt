@@ -1,0 +1,4 @@
+SELECT
+    min(wiek) AS [min_wiek]
+FROM
+    gracze;

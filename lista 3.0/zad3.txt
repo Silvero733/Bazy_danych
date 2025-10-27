@@ -1,0 +1,4 @@
+SELECT
+    sum(wiek) AS [suma lat]
+FROM
+    gracze;

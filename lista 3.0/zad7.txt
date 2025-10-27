@@ -1,0 +1,4 @@
+SELECT
+    max(wiek) - min(wiek) AS [roznica]
+FROM
+    gracze;

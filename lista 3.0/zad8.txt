@@ -1,0 +1,4 @@
+SELECT
+    round(min(wiek) / (sum(wiek) / count(wiek)) * 100, 2) AS [procent wartosci minimalnej]
+FROM
+    gracze;
