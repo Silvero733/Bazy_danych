@@ -1,7 +1,0 @@
-SELECT
-    nazwa,
-    kategoria
-FROM
-    gry
-WHERE
-    kategoria <> "logiczna";

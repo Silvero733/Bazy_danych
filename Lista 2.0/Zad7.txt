@@ -1,6 +1,0 @@
-SELECT
-    *
-FROM
-    gracze
-WHERE
-    wiek BETWEEN 40 AND 60

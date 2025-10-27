@@ -1,8 +1,0 @@
-SELECT
-    *
-FROM
-    gracze
-WHERE
-    wiek > 17
-ORDER BY
-    wiek ASC;
