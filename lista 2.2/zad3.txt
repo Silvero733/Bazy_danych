@@ -1,0 +1,6 @@
+SELECT
+    id_gry
+FROM
+    gry
+WHERE
+    nazwa LIKE "??"

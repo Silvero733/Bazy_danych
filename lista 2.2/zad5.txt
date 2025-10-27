@@ -1,0 +1,6 @@
+SELECT
+    id_gracza
+FROM
+    gracze
+WHERE
+    id_gracza LIKE "1#1"

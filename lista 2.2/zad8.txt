@@ -1,0 +1,8 @@
+SELECT
+    *
+FROM
+    gry
+WHERE
+    nazwa NOT LIKE "??????*"
+ORDER BY
+    nazwa ASC;
