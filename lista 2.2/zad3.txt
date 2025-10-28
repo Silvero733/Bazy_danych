@@ -1,5 +1,5 @@
 SELECT
-    id_gry
+    id_gry, nazwa
 FROM
     gry
 WHERE
