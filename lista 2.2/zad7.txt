@@ -3,4 +3,5 @@ SELECT
 FROM
     gry
 WHERE
-    nazwa NOT LIKE "*?? ??*"
+
+    nazwa NOT LIKE "* ?? ?? *"
