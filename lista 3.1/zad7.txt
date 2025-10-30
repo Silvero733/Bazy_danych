@@ -1,0 +1,7 @@
+SELECT
+    count(*) as [szlacheckie]
+FROM
+    gracze
+WHERE
+    nazwisko LIKE "*ski"
+    OR nazwisko LIKE "*ska"

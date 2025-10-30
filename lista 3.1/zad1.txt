@@ -1,0 +1,5 @@
+SELECT
+    sum(ocena) AS [suma],
+    avg(ocena) AS [srednia]
+FROM
+    oceny;

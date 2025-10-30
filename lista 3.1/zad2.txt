@@ -1,0 +1,6 @@
+SELECT
+    min(wiek) AS [min],
+    max(wiek) AS [max],
+    max - min AS [rozstep]
+FROM
+    gracze;

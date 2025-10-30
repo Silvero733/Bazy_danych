@@ -1,0 +1,7 @@
+SELECT
+    avg(wiek) AS [sr],
+    round(sr, 3) AS [zaokr_sr_3],
+    round(sr, 1) AS [zaokr_sr_1],
+    round(sr, 0) AS [zaokr_sr_0]
+FROM
+    gracze;

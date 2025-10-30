@@ -1,0 +1,7 @@
+SELECT
+    avg(ocena) AS [bez_skrajnych]
+FROM
+    oceny
+WHERE
+    ocena <> 1
+    AND ocena <> 10;

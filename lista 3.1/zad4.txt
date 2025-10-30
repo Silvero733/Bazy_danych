@@ -1,0 +1,6 @@
+SELECT
+    count(*) AS [kandydaci]
+FROM
+    gracze
+WHERE
+    wiek >= 35;

@@ -1,0 +1,6 @@
+SELECT
+    round(avg(ocena)) AS [2 cyfr ID]
+FROM
+    oceny
+WHERE
+    id_gracza LIKE "??"

@@ -1,0 +1,6 @@
+SELECT
+    count(*) as [ilość mizantropijnych]
+FROM
+    gry
+WHERE
+    kategoria NOT IN ("kooperacyjna", "familijna", "imprezowa")
