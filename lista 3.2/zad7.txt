@@ -1,0 +1,20 @@
+SELECT
+    imie,
+    nazwisko
+FROM
+    gracze
+WHERE
+    id_gracza IN (
+        SELECT
+            id_gracza
+        FROM
+            oceny
+        WHERE
+            stan = "chce kupic"
+            AND ocena = (
+                SELECT
+                    min(ocena)
+                FROM
+                    oceny
+            )
+    )

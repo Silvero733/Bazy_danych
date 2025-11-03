@@ -1,0 +1,14 @@
+SELECT
+    sum(ocena) AS [suma ocen],
+    count(ocena) AS [liczba ocen]
+FROM
+    oceny
+WHERE
+    id_gry IN (
+        SELECT
+            id_gry
+        FROM
+            gry
+        WHERE
+            kategoria = "strategiczna"
+    )

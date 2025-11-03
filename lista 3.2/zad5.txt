@@ -1,0 +1,9 @@
+SELECT
+   *
+from oceny
+where id_gry in (SELECT
+    id_gry
+FROM
+    gry
+WHERE
+    kategoria = "strategiczna";)

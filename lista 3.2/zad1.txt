@@ -1,0 +1,11 @@
+SELECT
+    wiek
+FROM
+    gracze
+WHERE
+    wiek > (
+        SELECT
+            avg(wiek)
+        FROM
+            gracze
+    )

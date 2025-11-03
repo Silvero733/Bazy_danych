@@ -1,0 +1,14 @@
+SELECT
+    id_gry,
+    ocena AS najwyzsza_ocena
+FROM
+    oceny
+WHERE
+    ocena = (
+        SELECT
+            max(ocena)
+        FROM
+            oceny
+    )
+ORDER BY
+    id_gry ASC

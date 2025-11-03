@@ -1,0 +1,11 @@
+SELECT
+    count(ocena)
+FROM
+    oceny
+WHERE
+    ocena = (
+        SELECT
+            min(ocena)
+        FROM
+            oceny
+    )

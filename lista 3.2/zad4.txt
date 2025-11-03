@@ -1,0 +1,33 @@
+SELECT
+    (
+        (
+            SELECT
+                count(*)
+            FROM
+                oceny
+            WHERE
+                stan = "posiada"
+        ) / count(*)
+    ) * 100 AS [posiadane],
+    (
+        (
+            SELECT
+                count(*)
+            FROM
+                oceny
+            WHERE
+                stan = "chce kupic"
+        ) / count(*)
+    ) * 100 AS [chciane],
+    (
+        (
+            SELECT
+                count(*)
+            FROM
+                oceny
+            WHERE
+                stan = "sprzedal"
+        ) / count(*)
+    ) * 100 AS [sprzedane]
+FROM
+    oceny
