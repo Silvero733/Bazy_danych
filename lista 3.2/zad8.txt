@@ -1,0 +1,21 @@
+SELECT
+    *
+FROM
+    gry
+WHERE
+    id_gry IN (
+        SELECT
+            id_gry
+        FROM
+            oceny
+        WHERE
+            ocena = (
+                SELECT
+                    round(avg(ocena))
+                FROM
+                    oceny
+            )
+    )
+ORDER BY
+    kategoria ASC,
+    nazwa ASC
