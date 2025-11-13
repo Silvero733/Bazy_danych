@@ -1,5 +1,5 @@
 SELECT
-    wiek
+    *
 FROM
     gracze
 WHERE
@@ -8,4 +8,5 @@ WHERE
             avg(wiek)
         FROM
             gracze
+
     )
