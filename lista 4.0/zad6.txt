@@ -1,0 +1,7 @@
+SELECT
+    id_gry,
+    MIN(ocena) AS [min_ocena]
+FROM
+    oceny
+GROUP BY
+    id_gry

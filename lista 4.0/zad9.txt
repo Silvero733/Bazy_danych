@@ -1,0 +1,13 @@
+SELECT
+    id_gry,
+    stan,
+    ocena,
+    COUNT(*) AS [ilosc unikalnych opini]
+FROM
+    oceny
+GROUP BY
+    id_gry,
+    stan,
+    ocena
+ORDER BY
+    COUNT(*) DESC

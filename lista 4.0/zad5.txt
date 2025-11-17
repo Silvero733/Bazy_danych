@@ -1,0 +1,7 @@
+SELECT
+    kategoria,
+    COUNT(*)
+FROM
+    gry
+GROUP BY
+    kategoria

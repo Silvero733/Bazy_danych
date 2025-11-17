@@ -1,0 +1,13 @@
+SELECT
+    nazwisko AS [unikalne_nazwiska]
+FROM
+    gracze
+GROUP BY
+    nazwisko;
+
+
+
+SELECT DISTINCT
+    (nazwisko) AS [unikalne_nazwiska]
+FROM
+    gracze

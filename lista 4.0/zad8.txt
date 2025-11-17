@@ -1,0 +1,9 @@
+SELECT
+    stan,
+    ROUND(AVG(ocena,), 2) AS [srednia ocen]
+FROM
+    oceny
+GROUP BY
+    stan
+ORDER BY
+    ROUND(AVG(ocena,), 2) ASC

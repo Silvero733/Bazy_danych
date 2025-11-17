@@ -1,0 +1,9 @@
+SELECT
+    imie,
+    COUNT(*)
+FROM
+    gracze
+GROUP BY
+    imie
+ORDER BY
+    COUNT(*) DESC

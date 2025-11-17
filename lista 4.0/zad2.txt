@@ -1,0 +1,13 @@
+SELECT
+    ocena AS [rozne oceny]
+FROM
+    oceny
+GROUP BY
+    ocena;
+
+
+
+SELECT DISTINCT
+    (ocena) AS [rozne oceny]
+FROM
+    oceny

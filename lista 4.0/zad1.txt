@@ -1,0 +1,13 @@
+SELECT
+    kategoria
+FROM
+    gry
+GROUP BY
+    kategoria;
+
+
+
+SELECT DISTINCT
+    (kategoria)
+FROM
+    gry

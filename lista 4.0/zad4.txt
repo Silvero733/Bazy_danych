@@ -1,0 +1,7 @@
+SELECT
+    nazwisko + ' ' + imie AS [unikalni gracze]
+FROM
+    gracze
+GROUP BY
+    nazwisko,
+    imie
