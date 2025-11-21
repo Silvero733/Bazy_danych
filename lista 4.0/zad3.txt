@@ -3,6 +3,8 @@ SELECT
 FROM
     gracze
 GROUP BY
+    nazwisko
+ORDER BY
     nazwisko;
 
 
