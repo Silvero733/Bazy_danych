@@ -1,0 +1,16 @@
+SELECT
+    id_gry,
+    round(avg(ocena), 2)
+FROM
+    oceny
+WHERE
+    id_gry IN (
+        SELECT
+            id_gry
+        FROM
+            gry
+        WHERE
+            kategoria = "imprezowa"
+    )
+GROUP BY
+    id_gry

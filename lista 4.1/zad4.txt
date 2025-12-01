@@ -1,0 +1,9 @@
+SELECT
+    nazwisko,
+    avg(wiek)
+FROM
+    gracze
+WHERE
+    nazwisko LIKE "*ski"
+GROUP BY
+    nazwisko

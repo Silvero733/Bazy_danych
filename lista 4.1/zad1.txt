@@ -1,0 +1,7 @@
+SELECT
+    id_gry,
+    Round(Avg(ocena), 2)
+FROM
+    oceny
+GROUP BY
+    id_gry

@@ -1,0 +1,9 @@
+SELECT
+    imie,
+    sum(wiek)
+FROM
+    gracze
+WHERE
+    wiek < 20
+GROUP BY
+    imie

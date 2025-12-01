@@ -1,0 +1,9 @@
+SELECT
+    imie,
+    count(imie)
+FROM
+    gracze
+WHERE
+    imie IN ("Borys", "Kajetan", "Maria", "Piotr", "Mieszko")
+GROUP BY
+    imie

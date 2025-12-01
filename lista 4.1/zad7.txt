@@ -1,0 +1,28 @@
+SELECT
+    nazwisko
+FROM
+    (
+        SELECT
+            nazwisko,
+            count(nazwisko) AS a
+        FROM
+            gracze
+        GROUP BY
+            nazwisko
+    )
+WHERE
+    a = (
+        SELECT
+            max(a)
+        FROM
+            (
+                SELECT
+                    nazwisko,
+                    count(nazwisko) AS a
+                FROM
+                    gracze
+                GROUP BY
+                    nazwisko
+            )
+    )
+    

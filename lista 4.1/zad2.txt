@@ -1,0 +1,10 @@
+SELECT
+    id_gry,
+    Round(Avg(ocena), 2)
+FROM
+    oceny
+WHERE
+    stan = "posiada"
+    OR stan = "sprzedal"
+GROUP BY
+    id_gry
