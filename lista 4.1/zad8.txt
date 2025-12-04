@@ -1,0 +1,34 @@
+SELECT
+    wiek
+FROM
+    gracze
+WHERE
+    id_gracza = (
+        SELECT
+            id_gracza
+        FROM
+            (
+                SELECT
+                    id_gracza,
+                    count(ocena) AS a
+                FROM
+                    oceny
+                GROUP BY
+                    id_gracza
+            )
+        WHERE
+            a = (
+                SELECT
+                    max(a)
+                FROM
+                    (
+                        SELECT
+                            id_gracza,
+                            count(ocena) AS a
+                        FROM
+                            oceny
+                        GROUP BY
+                            id_gracza
+                    )
+            )
+    )
