@@ -1,6 +1,6 @@
 SELECT
     id_gry,
-    Round(Avg(ocena), 2)
+    Round(Avg(ocena), 4)
 FROM
     oceny
 WHERE
