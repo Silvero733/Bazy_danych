@@ -5,5 +5,6 @@ FROM
     gracze
 WHERE
     wiek < 20
+    and wiek > 10
 GROUP BY
     imie
