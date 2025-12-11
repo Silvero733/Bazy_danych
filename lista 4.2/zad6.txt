@@ -1,0 +1,11 @@
+SELECT
+    imie,
+    nazwisko,
+    count(*)
+FROM
+    gracze
+GROUP BY
+    imie,
+    nazwisko
+HAVING
+    count(*) = 1

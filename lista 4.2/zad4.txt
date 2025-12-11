@@ -1,0 +1,10 @@
+SELECT
+    count(*) AS [ilosc (parzyste)]
+FROM
+    gracze
+GROUP BY
+    nazwisko
+HAVING
+    count(*) mod 2 = 0
+ORDER BY
+    count(*) DESC;

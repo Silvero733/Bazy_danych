@@ -1,0 +1,16 @@
+SELECT
+    count(*),
+    nazwisko
+FROM
+    gracze
+WHERE
+    nazwisko LIKE "??a*"
+    OR nazwisko LIKE "??e*"
+    OR nazwisko LIKE "??i*"
+    OR nazwisko LIKE "??o*"
+    OR nazwisko LIKE "??u*"
+    OR nazwisko LIKE "??y*"
+GROUP BY
+    nazwisko
+HAVING
+    count(*) < 10;

@@ -1,0 +1,8 @@
+SELECT
+    count(*) AS ilosc
+FROM
+    oceny
+GROUP BY
+    stan
+HAVING
+    count(*) > 1100

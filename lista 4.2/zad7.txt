@@ -1,0 +1,11 @@
+SELECT
+    count(*),
+    kategoria
+FROM
+    gry
+WHERE
+    kategoria <> "kooperacyjna"
+GROUP BY
+    kategoria
+HAVING
+    count(*) < 30

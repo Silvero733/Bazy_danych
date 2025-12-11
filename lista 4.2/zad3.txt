@@ -1,0 +1,9 @@
+SELECT
+    min(ocena)
+FROM
+    oceny
+WHERE
+    ocena <> 1
+GROUP BY
+    id_gry;
+Order by ocena ASC

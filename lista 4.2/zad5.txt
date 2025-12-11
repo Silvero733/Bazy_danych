@@ -1,0 +1,11 @@
+SELECT
+    sum(ocena)
+FROM
+    oceny
+GROUP BY
+    id_gracza
+HAVING
+    sum(ocena) > 9
+    AND sum(ocena) < 99
+ORDER BY
+    sum(ocena) ASC;
