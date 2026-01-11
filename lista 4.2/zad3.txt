@@ -5,5 +5,5 @@ FROM
 WHERE
     ocena <> 1
 GROUP BY
-    id_gry;
-Order by ocena ASC
+    id_gry
+Order by min(ocena) ASC;
