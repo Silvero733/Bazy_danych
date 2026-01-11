@@ -1,8 +1,9 @@
 SELECT
-    count(*) AS ilosc
+    count(*) AS [ilosc>1100]
 FROM
     oceny
 GROUP BY
     stan
 HAVING
+
     count(*) > 1100
