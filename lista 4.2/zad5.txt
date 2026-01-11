@@ -1,5 +1,5 @@
 SELECT
-    sum(ocena)
+    sum(ocena) as [suma_ocen]
 FROM
     oceny
 GROUP BY
@@ -8,4 +8,5 @@ HAVING
     sum(ocena) > 9
     AND sum(ocena) < 99
 ORDER BY
+
     sum(ocena) ASC;
