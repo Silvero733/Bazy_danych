@@ -1,0 +1,11 @@
+SELECT
+    g.kategoria,
+    count(*)
+FROM
+    gry g
+WHERE
+    g.kategoria <> "kooperacyjna"
+GROUP BY
+    g.kategoria
+HAVING
+    count(*) < 31;
