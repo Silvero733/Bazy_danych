@@ -1,0 +1,15 @@
+SELECT
+    *
+FROM
+    oceny o
+    INNER JOIN gracze g ON o.id_gracza = g.id_gracza;
+
+
+
+SELECT
+    *
+FROM
+    oceny o,
+    gracze g
+WHERE
+    o.id_gracza = g.id_gracza;

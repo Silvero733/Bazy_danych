@@ -1,0 +1,8 @@
+SELECT
+    g.nazwa,
+    o.id_gracza,
+    o.stan,
+    o.ocena
+FROM
+    oceny o
+    INNER JOIN gry g ON o.id_gry = g.id_gry;

@@ -1,0 +1,8 @@
+SELECT
+    g.nazwa,
+    ROUND(AVG(o.ocena), 3)
+FROM
+    oceny o
+    INNER JOIN gry g ON o.id_gry = g.id_gry
+GROUP BY
+    g.nazwa

@@ -1,0 +1,15 @@
+SELECT
+    g.nazwa,
+    COUNT(o.ocena)
+FROM
+    (
+        oceny o
+        INNER JOIN gry g ON o.id_gry = g.id_gry
+    )
+    INNER JOIN gracze p ON o.id_gracza = p.id_gracza
+WHERE
+    p.wiek BETWEEN 20 AND 49
+GROUP BY
+    g.nazwa
+ORDER BY
+    COUNT(o.ocena) DESC

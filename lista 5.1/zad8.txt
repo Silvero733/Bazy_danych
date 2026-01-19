@@ -1,0 +1,17 @@
+SELECT
+    p.wiek,
+    MIN(o.ocena) AS [najnizsza ocena nieparzysta]
+FROM
+    (
+        oceny o
+        INNER JOIN gry g ON o.id_gry = g.id_gry
+    )
+    INNER JOIN gracze p ON o.id_gracza = p.id_gracza
+WHERE
+    g.kategoria IN ("familijna", "logiczna", "kooperacyjna")
+GROUP BY
+    p.wiek
+HAVING
+    MIN(o.ocena) MOD 2 = 1
+ORDER BY
+    p.wiek ASC

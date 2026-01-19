@@ -1,0 +1,13 @@
+SELECT
+    g.imie,
+    g.nazwisko,
+    g.wiek
+FROM
+    gracze g
+    INNER JOIN oceny o ON g.id_gracza = o.id_gracza
+WHERE
+    nazwisko LIKE "*a?a*"
+GROUP BY
+    g.imie,
+    g.nazwisko,
+    g.wiek
