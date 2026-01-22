@@ -8,4 +8,5 @@ WHERE
 GROUP BY
     g.kategoria
 HAVING
-    count(*) < 31;
+
+    count(*) <= 31;
