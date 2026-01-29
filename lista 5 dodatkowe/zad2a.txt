@@ -1,0 +1,9 @@
+SELECT
+    dw.id_wypozyczenia,
+    s.marka,
+    s.model
+FROM
+    Dane_wypozyczen dw
+    INNER JOIN Samochody s ON dw.id_samochodu = s.id_samochodu
+ORDER BY
+    dw.id_wypozyczenia;
