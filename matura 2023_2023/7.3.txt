@@ -1,0 +1,24 @@
+SELECT
+    count(*)
+FROM
+    (
+        SELECT
+            g.id_gracza,
+            count(*)
+        FROM
+            (
+                gracze g
+                INNER JOIN oceny o ON g.id_gracza = o.id_gracza
+            )
+        WHERE
+            g.id_gracza NOT IN (
+                SELECT
+                    id_gracza
+                FROM
+                    oceny
+                WHERE
+                    stan LIKE "posiada"
+            )
+        GROUP BY
+            g.id_gracza
+    )
