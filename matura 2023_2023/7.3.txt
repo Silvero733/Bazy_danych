@@ -14,8 +14,9 @@ FROM
                 FROM
                     oceny
                 WHERE
-                    stan LIKE "posiada"
+                    stan = "posiada"
             )
         GROUP BY
             id_gracza
     )
+
