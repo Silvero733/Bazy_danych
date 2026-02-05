@@ -8,7 +8,7 @@ FROM
     )
     INNER JOIN gry AS g ON o.id_gry = g.id_gry
 WHERE
-    gr.wiek IN (20, 49)
+    gr.wiek between 20 and 49
 GROUP BY
     g.nazwa
 HAVING
@@ -27,11 +27,12 @@ HAVING
                     )
                     INNER JOIN gry g ON o.id_gry = g.id_gry
                 WHERE
-                    gr.wiek IN (20, 49)
+                    gr.wiek between 20 and 49
                 GROUP BY
                     g.nazwa
                 ORDER BY
                     count(*) DESC
             )
     );
+
 
