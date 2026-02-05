@@ -1,0 +1,115 @@
+SELECT
+    "seniorzy" AS [wiek],
+    g.nazwa,
+    count(*) AS a
+FROM
+    (
+        oceny AS o
+        INNER JOIN gracze AS gr ON o.id_gracza = gr.id_gracza
+    )
+    INNER JOIN gry AS g ON o.id_gry = g.id_gry
+WHERE
+    gr.wiek BETWEEN 50 AND 99
+GROUP BY
+    g.nazwa
+HAVING
+    count(*) = (
+        SELECT
+            max(a)
+        FROM
+            (
+                SELECT
+                    g.nazwa,
+                    count(*) AS [a]
+                FROM
+                    (
+                        oceny o
+                        INNER JOIN gracze gr ON o.id_gracza = gr.id_gracza
+                    )
+                    INNER JOIN gry g ON o.id_gry = g.id_gry
+                WHERE
+                    gr.wiek BETWEEN 50 AND 99
+                GROUP BY
+                    g.nazwa
+                ORDER BY
+                    count(*) DESC
+            )
+    );
+
+UNION
+SELECT
+    "weterani" AS [wiek],
+    g.nazwa,
+    count(*) AS a
+FROM
+    (
+        oceny AS o
+        INNER JOIN gracze AS gr ON o.id_gracza = gr.id_gracza
+    )
+    INNER JOIN gry AS g ON o.id_gry = g.id_gry
+WHERE
+    gr.wiek BETWEEN 20 AND 49
+GROUP BY
+    g.nazwa
+HAVING
+    count(*) = (
+        SELECT
+            max(a)
+        FROM
+            (
+                SELECT
+                    g.nazwa,
+                    count(*) AS [a]
+                FROM
+                    (
+                        oceny o
+                        INNER JOIN gracze gr ON o.id_gracza = gr.id_gracza
+                    )
+                    INNER JOIN gry g ON o.id_gry = g.id_gry
+                WHERE
+                    gr.wiek BETWEEN 20 AND 49
+                GROUP BY
+                    g.nazwa
+                ORDER BY
+                    count(*) DESC
+            )
+    );
+
+UNION
+SELECT
+    "juniorzy" AS [wiek],
+    g.nazwa,
+    count(*) AS a
+FROM
+    (
+        oceny AS o
+        INNER JOIN gracze AS gr ON o.id_gracza = gr.id_gracza
+    )
+    INNER JOIN gry AS g ON o.id_gry = g.id_gry
+WHERE
+    gr.wiek < 20
+GROUP BY
+    g.nazwa
+HAVING
+    count(*) = (
+        SELECT
+            max(a)
+        FROM
+            (
+                SELECT
+                    g.nazwa,
+                    count(*) AS [a]
+                FROM
+                    (
+                        oceny o
+                        INNER JOIN gracze gr ON o.id_gracza = gr.id_gracza
+                    )
+                    INNER JOIN gry g ON o.id_gry = g.id_gry
+                WHERE
+                    gr.wiek < 20
+                GROUP BY
+                    g.nazwa
+                ORDER BY
+                    count(*) DESC
+            )
+    );
