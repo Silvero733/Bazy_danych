@@ -3,15 +3,12 @@ SELECT
 FROM
     (
         SELECT
-            g.id_gracza,
+            id_gracza,
             count(*)
         FROM
-            (
-                gracze g
-                INNER JOIN oceny o ON g.id_gracza = o.id_gracza
-            )
+            oceny
         WHERE
-            g.id_gracza NOT IN (
+            id_gracza NOT IN (
                 SELECT
                     id_gracza
                 FROM
@@ -20,5 +17,5 @@ FROM
                     stan LIKE "posiada"
             )
         GROUP BY
-            g.id_gracza
+            id_gracza
     )
