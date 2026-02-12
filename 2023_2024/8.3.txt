@@ -1,0 +1,14 @@
+SELECT
+    Imie,
+    Nazwisko,
+    NrRejestracyjny
+FROM
+    Kierowcy
+WHERE
+    IdOsoby NOT IN (
+        SELECT
+            k.IdOsoby
+        FROM
+            Kierowcy k
+            INNER JOIN Rejestr r ON k.IdOsoby = r.IdOsoby
+    );

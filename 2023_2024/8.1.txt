@@ -1,0 +1,74 @@
+SELECT
+    b,
+    c,
+    a
+FROM
+    (
+        SELECT
+            k.IdOsoby,
+            k.Imie AS [b],
+            k.Nazwisko AS [c],
+            sum(t.Kwota) AS [a]
+        FROM
+            (
+                Kierowcy k
+                INNER JOIN rejestr r ON k.IdOsoby = r.IdOsoby
+            )
+            INNER JOIN Taryfikator t ON r.IdWykroczenia = t.IdWykroczenia
+        GROUP BY
+            k.IdOsoby,
+            k.Imie,
+            k.nazwisko
+        ORDER BY
+            sum(t.Kwota) DESC
+    )
+WHERE
+    k.IdOsoby = (
+        SELECT
+            IdOsoby
+        FROM
+            (
+                SELECT
+                    k.IdOsoby,
+                    k.Imie,
+                    k.Nazwisko,
+                    sum(t.Kwota) AS [a]
+                FROM
+                    (
+                        Kierowcy k
+                        INNER JOIN rejestr r ON k.IdOsoby = r.IdOsoby
+                    )
+                    INNER JOIN Taryfikator t ON r.IdWykroczenia = t.IdWykroczenia
+                GROUP BY
+                    k.IdOsoby,
+                    k.imie,
+                    k.nazwisko
+                ORDER BY
+                    sum(t.Kwota) DESC
+            )
+        WHERE
+            a = (
+                SELECT
+                    max(a)
+                FROM
+                    (
+                        SELECT
+                            k.IdOsoby,
+                            k.Imie,
+                            k.Nazwisko,
+                            sum(t.Kwota) AS [a]
+                        FROM
+                            (
+                                Kierowcy k
+                                INNER JOIN rejestr r ON k.IdOsoby = r.IdOsoby
+                            )
+                            INNER JOIN Taryfikator t ON r.IdWykroczenia = t.IdWykroczenia
+                        GROUP BY
+                            k.IdOsoby,
+                            k.imie,
+                            k.nazwisko
+                        ORDER BY
+                            sum(t.Kwota) DESC
+                    )
+            )
+    )

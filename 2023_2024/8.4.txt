@@ -1,0 +1,6 @@
+Select IdFotoradaru
+from Fotoradar
+where IdFotoradaru not in (
+    Select f.IdFotoradaru
+    from Fotoradar f inner join Rejestr r on f.IdFotoradaru = r.IdFotoradaru
+);
