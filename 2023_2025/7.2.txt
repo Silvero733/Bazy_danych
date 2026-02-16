@@ -1,0 +1,50 @@
+SELECT
+    l.nazwa_lazika,
+    min(p.data_pomiaru),
+    max(p.data_pomiaru)
+FROM
+    Laziki l
+    INNER JOIN Pomiary p ON l.nr_lazika = p.nr_lazika
+GROUP BY
+    l.nazwa_lazika
+HAVING
+    nazwa_lazika = (
+        SELECT
+            nazwa_lazika
+        FROM
+            Laziki
+        WHERE
+            nr_lazika = (
+                SELECT
+                    nr_lazika
+                FROM
+                    (
+                        SELECT
+                            nr_lazika,
+                            (max(data_pomiaru) - min(data_pomiaru)) AS a
+                        FROM
+                            Pomiary
+                        GROUP BY
+                            nr_lazika
+                        ORDER BY
+                            (max(data_pomiaru) - min(data_pomiaru)) DESC
+                    )
+                WHERE
+                    a = (
+                        SELECT
+                            max(a)
+                        FROM
+                            (
+                                SELECT
+                                    nr_lazika,
+                                    (max(data_pomiaru) - min(data_pomiaru)) AS a
+                                FROM
+                                    Pomiary
+                                GROUP BY
+                                    nr_lazika
+                                ORDER BY
+                                    (max(data_pomiaru) - min(data_pomiaru)) DESC
+                            )
+                    )
+            )
+    )

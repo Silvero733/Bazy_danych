@@ -1,0 +1,41 @@
+SELECT
+    o.nazwa_obszaru
+FROM
+    (
+        SELECT
+            o.nazwa_obszaru,
+            o.kod_obszaru,
+            sum(p.ilosc) AS a
+        FROM
+            Obszary o
+            INNER JOIN pomiary p ON o.kod_obszaru = p.kod_obszaru
+        WHERE
+            p.glebokosc <= 100
+        GROUP BY
+            o.nazwa_obszaru,
+            o.kod_obszaru
+        ORDER BY
+            sum(p.ilosc) DESC
+    )
+WHERE
+    a = (
+        SELECT
+            max(a)
+        FROM
+            (
+                SELECT
+                    o.nazwa_obszaru,
+                    o.kod_obszaru,
+                    sum(p.ilosc) AS a
+                FROM
+                    Obszary o
+                    INNER JOIN pomiary p ON o.kod_obszaru = p.kod_obszaru
+                WHERE
+                    p.glebokosc <= 100
+                GROUP BY
+                    o.nazwa_obszaru,
+                    o.kod_obszaru
+                ORDER BY
+                    sum(p.ilosc) DESC
+            )
+    )
