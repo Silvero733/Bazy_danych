@@ -1,0 +1,12 @@
+SELECT
+    p.id_pracownika,
+    p.imie_pracownika,
+    p.nazwisko_pracownika,
+    p.miasto_pracownika,
+    p.telefon_pracownika,
+    p.email_pracownika
+FROM
+    Pracownicy p
+    LEFT JOIN Wypozyczenia w ON p.id_pracownika = w.id_pracownika
+WHERE
+    w.id_pracownika IS NULL
