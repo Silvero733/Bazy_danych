@@ -1,8 +1,0 @@
-SELECT
-    *
-FROM
-    Klienci k
-    LEFT JOIN Wypozyczenia w ON k.id_klienta = w.id_klienta
-WHERE
-    w.id_klienta IS NULL
-    AND numer_domu_klienta NOT LIKE "*/*"

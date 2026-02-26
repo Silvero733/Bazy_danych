@@ -1,6 +1,0 @@
-SELECT
-    *
-FROM
-    wypozyczenia
-WHERE
-    id_klienta IS NULL

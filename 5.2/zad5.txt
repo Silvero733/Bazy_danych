@@ -1,5 +1,0 @@
-SELECT
-    *
-FROM
-    klienci k
-    LEFT JOIN wypozyczenia w ON k.id_klienta = w.id_klienta;

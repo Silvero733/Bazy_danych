@@ -1,8 +1,0 @@
-SELECT
-    *
-FROM
-    Pracownicy
-WHERE
-    szef_id IS NULL
-ORDER BY
-    telefon_pracownika DESC

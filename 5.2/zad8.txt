@@ -1,8 +1,0 @@
-SELECT
-    s.marka,
-    s.model
-FROM
-    Samochody s
-    LEFT JOIN Dane_wypozyczen w ON s.id_samochodu = w.id_samochodu
-WHERE
-    w.id_samochodu IS NULL
