@@ -1,0 +1,9 @@
+SELECT
+    k.miasto_klienta,
+    k.ulica_klienta,
+    k.numer_domu_klienta
+FROM
+    Klienci k
+    INNER JOIN Wypozyczenia w ON k.id_klienta = w.id_klienta
+WHERE
+    w.id_pracownika IS NULL

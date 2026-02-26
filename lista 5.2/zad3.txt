@@ -1,0 +1,6 @@
+SELECT
+    count(*)
+FROM
+    Wypozyczenia
+WHERE
+    id_pracownika IS NOT NULL

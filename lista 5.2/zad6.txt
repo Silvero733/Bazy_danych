@@ -1,0 +1,8 @@
+SELECT
+    p.imie_pracownika,
+    p.nazwisko_pracownika,
+    p.email_pracownika,
+    w.data_wyp
+FROM
+    pracownicy p
+    LEFT JOIN Wypozyczenia w ON p.id_pracownika = w.id_pracownika
