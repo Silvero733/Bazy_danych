@@ -1,0 +1,13 @@
+SELECT
+    *
+FROM
+    Pracownicy p
+    LEFT JOIN Wypozyczenia w ON p.id_pracownika = w.id_pracownika
+UNION
+SELECT
+    *
+FROM
+    Pracownicy p
+    RIGHT JOIN Wypozyczenia w ON p.id_pracownika = w.id_pracownika
+WHERE
+    p.id_pracownika IS NULL
