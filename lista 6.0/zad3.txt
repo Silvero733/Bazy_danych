@@ -1,0 +1,1 @@
+INSERT INTO oceny values (3922, 1042, 132, NULL, 7);

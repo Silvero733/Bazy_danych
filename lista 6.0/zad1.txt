@@ -1,0 +1,1 @@
+INSERT INTO gracze values (1042,  "Jan",  "Kowalski", 67);

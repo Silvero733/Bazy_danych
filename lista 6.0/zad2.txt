@@ -1,0 +1,1 @@
+INSERT INTO gry values (132,  "Kolejka",  "familijna");
