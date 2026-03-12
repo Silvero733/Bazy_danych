@@ -1,0 +1,1 @@
+Update gracze set imie = NULL where id_gracza = 32

@@ -1,0 +1,1 @@
+Update oceny set ocena = 10, stan = "aktualnie gra" where id_gry = (Select id_gry from gry where nazwa = "Catan")
