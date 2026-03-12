@@ -4,5 +4,8 @@ SELECT
 FROM
     oceny o
     INNER JOIN gry g ON o.id_gry = g.id_gry
+WHERE
+    g.kategoria = "logiczna"
 GROUP BY
+
     g.nazwa
