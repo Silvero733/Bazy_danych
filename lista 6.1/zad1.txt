@@ -1,0 +1,1 @@
+Update gracze set nazwisko = "Smith" where id_gracza = 1;
