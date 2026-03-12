@@ -1,0 +1,1 @@
+Delete * from gry where nazwa <> "Catan"
